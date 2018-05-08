@@ -12,6 +12,10 @@
 		EA8AADE01F555DF0000B706F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8AADDE1F555DF0000B706F /* Main.storyboard */; };
 		EA8AADE21F555DF0000B706F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8AADE11F555DF0000B706F /* Assets.xcassets */; };
 		EA8AADE51F555DF0000B706F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8AADE31F555DF0000B706F /* LaunchScreen.storyboard */; };
+		EA8C6C0D20A1346600AA77B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C6C0B20A1346600AA77B2 /* LoginViewController.swift */; };
+		EA8C6C0E20A1346600AA77B2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8C6C0C20A1346600AA77B2 /* LoginViewController.xib */; };
+		EA8C6C1020A138EA00AA77B2 /* 6D12DD4F91443626ECEBD8FE0027800C.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA8C6C0F20A138EA00AA77B2 /* 6D12DD4F91443626ECEBD8FE0027800C.jpg */; };
+		EA8C6C1420A13E0A00AA77B2 /* a6af6bc55acf39b1ed1d36ab98737d66.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8C6C1320A13E0A00AA77B2 /* a6af6bc55acf39b1ed1d36ab98737d66.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		EA8AADE11F555DF0000B706F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA8AADE41F555DF0000B706F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA8AADE61F555DF0000B706F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA8C6C0B20A1346600AA77B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EA8C6C0C20A1346600AA77B2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		EA8C6C0F20A138EA00AA77B2 /* 6D12DD4F91443626ECEBD8FE0027800C.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6D12DD4F91443626ECEBD8FE0027800C.jpg; sourceTree = "<group>"; };
+		EA8C6C1320A13E0A00AA77B2 /* a6af6bc55acf39b1ed1d36ab98737d66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a6af6bc55acf39b1ed1d36ab98737d66.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,58 @@
 		EA8AADD91F555DF0000B706F /* Swift4Learn */ = {
 			isa = PBXGroup;
 			children = (
+				EA8AADEC1F555E2B000B706F /* Module */,
 				EA8AADDA1F555DF0000B706F /* AppDelegate.swift */,
 				EA8AADDC1F555DF0000B706F /* ViewController.swift */,
+				EA8C6C0B20A1346600AA77B2 /* LoginViewController.swift */,
+				EA8C6C0C20A1346600AA77B2 /* LoginViewController.xib */,
 				EA8AADDE1F555DF0000B706F /* Main.storyboard */,
 				EA8AADE11F555DF0000B706F /* Assets.xcassets */,
 				EA8AADE31F555DF0000B706F /* LaunchScreen.storyboard */,
 				EA8AADE61F555DF0000B706F /* Info.plist */,
 			);
 			path = Swift4Learn;
+			sourceTree = "<group>";
+		};
+		EA8AADEC1F555E2B000B706F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EA8AADF01F555E66000B706F /* pages */,
+				EA8AADEF1F555E5A000B706F /* root */,
+				EA8AADEE1F555E46000B706F /* libs */,
+				EA8AADED1F555E3C000B706F /* resource */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EA8AADED1F555E3C000B706F /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C6C1320A13E0A00AA77B2 /* a6af6bc55acf39b1ed1d36ab98737d66.png */,
+				EA8C6C0F20A138EA00AA77B2 /* 6D12DD4F91443626ECEBD8FE0027800C.jpg */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		EA8AADEE1F555E46000B706F /* libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		EA8AADEF1F555E5A000B706F /* root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = root;
+			sourceTree = "<group>";
+		};
+		EA8AADF01F555E66000B706F /* pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +148,6 @@
 				TargetAttributes = {
 					EA8AADD61F555DF0000B706F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = T4VLN958UT;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,9 +175,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8C6C0E20A1346600AA77B2 /* LoginViewController.xib in Resources */,
+				EA8C6C1020A138EA00AA77B2 /* 6D12DD4F91443626ECEBD8FE0027800C.jpg in Resources */,
 				EA8AADE51F555DF0000B706F /* LaunchScreen.storyboard in Resources */,
 				EA8AADE21F555DF0000B706F /* Assets.xcassets in Resources */,
 				EA8AADE01F555DF0000B706F /* Main.storyboard in Resources */,
+				EA8C6C1420A13E0A00AA77B2 /* a6af6bc55acf39b1ed1d36ab98737d66.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8C6C0D20A1346600AA77B2 /* LoginViewController.swift in Sources */,
 				EA8AADDD1F555DF0000B706F /* ViewController.swift in Sources */,
 				EA8AADDB1F555DF0000B706F /* AppDelegate.swift in Sources */,
 			);
@@ -261,8 +316,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T4VLN958UT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Swift4Learn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tony.Swift4Learn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,8 +330,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T4VLN958UT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Swift4Learn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tony.Swift4Learn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +359,7 @@
 				EA8AADEB1F555DF0000B706F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
