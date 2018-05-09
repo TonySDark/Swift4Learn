@@ -9,6 +9,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    //嗯，相对于OC的xib的在m文件的声明，多了一些修饰，这也是必要的，毕竟h文件没了
     @IBOutlet weak var appIconImagView: UIImageView!
     @IBOutlet weak var accountTextF: UITextField!
     @IBOutlet weak var passwordTextF: UITextField!

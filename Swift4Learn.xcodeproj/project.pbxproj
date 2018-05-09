@@ -43,6 +43,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA869E6820A2A6A40061FE55 /* homePage */ = {
+			isa = PBXGroup;
+			children = (
+				EA8AADDC1F555DF0000B706F /* ViewController.swift */,
+			);
+			path = homePage;
+			sourceTree = "<group>";
+		};
+		EA869E6920A2A6BA0061FE55 /* loginPage */ = {
+			isa = PBXGroup;
+			children = (
+				EA8C6C0B20A1346600AA77B2 /* LoginViewController.swift */,
+				EA8C6C0C20A1346600AA77B2 /* LoginViewController.xib */,
+			);
+			path = loginPage;
+			sourceTree = "<group>";
+		};
 		EA8AADCE1F555DF0000B706F = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +81,6 @@
 			children = (
 				EA8AADEC1F555E2B000B706F /* Module */,
 				EA8AADDA1F555DF0000B706F /* AppDelegate.swift */,
-				EA8AADDC1F555DF0000B706F /* ViewController.swift */,
-				EA8C6C0B20A1346600AA77B2 /* LoginViewController.swift */,
-				EA8C6C0C20A1346600AA77B2 /* LoginViewController.xib */,
 				EA8AADDE1F555DF0000B706F /* Main.storyboard */,
 				EA8AADE11F555DF0000B706F /* Assets.xcassets */,
 				EA8AADE31F555DF0000B706F /* LaunchScreen.storyboard */,
@@ -112,6 +126,8 @@
 		EA8AADF01F555E66000B706F /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				EA869E6920A2A6BA0061FE55 /* loginPage */,
+				EA869E6820A2A6A40061FE55 /* homePage */,
 			);
 			path = pages;
 			sourceTree = "<group>";
