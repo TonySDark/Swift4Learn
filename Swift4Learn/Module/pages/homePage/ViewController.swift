@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     var _tableView : UITableView!
     var _dataSource : NSMutableArray!
     
