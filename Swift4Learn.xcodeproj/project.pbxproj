@@ -50,8 +50,9 @@
 		EA8AADE51F555DF0000B706F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8AADE31F555DF0000B706F /* LaunchScreen.storyboard */; };
 		EA8C6C0D20A1346600AA77B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C6C0B20A1346600AA77B2 /* LoginViewController.swift */; };
 		EA8C6C0E20A1346600AA77B2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8C6C0C20A1346600AA77B2 /* LoginViewController.xib */; };
-		EA8C6C1020A138EA00AA77B2 /* 6D12DD4F91443626ECEBD8FE0027800C.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA8C6C0F20A138EA00AA77B2 /* 6D12DD4F91443626ECEBD8FE0027800C.jpg */; };
 		EA8C6C1420A13E0A00AA77B2 /* a6af6bc55acf39b1ed1d36ab98737d66.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8C6C1320A13E0A00AA77B2 /* a6af6bc55acf39b1ed1d36ab98737d66.png */; };
+		EACE532320A5687200893628 /* 640_960.png in Resources */ = {isa = PBXBuildFile; fileRef = EACE532120A5687200893628 /* 640_960.png */; };
+		EACE532420A5687200893628 /* 750_1334.png in Resources */ = {isa = PBXBuildFile; fileRef = EACE532220A5687200893628 /* 750_1334.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,8 +101,9 @@
 		EA8AADE61F555DF0000B706F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA8C6C0B20A1346600AA77B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA8C6C0C20A1346600AA77B2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		EA8C6C0F20A138EA00AA77B2 /* 6D12DD4F91443626ECEBD8FE0027800C.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6D12DD4F91443626ECEBD8FE0027800C.jpg; sourceTree = "<group>"; };
 		EA8C6C1320A13E0A00AA77B2 /* a6af6bc55acf39b1ed1d36ab98737d66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a6af6bc55acf39b1ed1d36ab98737d66.png; sourceTree = "<group>"; };
+		EACE532120A5687200893628 /* 640_960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 640_960.png; sourceTree = "<group>"; };
+		EACE532220A5687200893628 /* 750_1334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 750_1334.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,7 +249,8 @@
 			children = (
 				EA5D12FE20A3DC4D00CDB45A /* 旧时光资源 */,
 				EA8C6C1320A13E0A00AA77B2 /* a6af6bc55acf39b1ed1d36ab98737d66.png */,
-				EA8C6C0F20A138EA00AA77B2 /* 6D12DD4F91443626ECEBD8FE0027800C.jpg */,
+				EACE532120A5687200893628 /* 640_960.png */,
+				EACE532220A5687200893628 /* 750_1334.png */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -342,11 +345,11 @@
 			files = (
 				EA5D133120A3DC4D00CDB45A /* 7B166F44-CDC3-471D-B696-5DEC98D5D35E.png in Resources */,
 				EA5D132F20A3DC4D00CDB45A /* 280613C3-45AB-43B9-B527-E7B4DB4B37DF.png in Resources */,
+				EACE532320A5687200893628 /* 640_960.png in Resources */,
 				EA5D131D20A3DC4D00CDB45A /* 秘密文本.rtf in Resources */,
 				EA5D132320A3DC4D00CDB45A /* 0F35F295BC9918029AB338DCC911FEF0.jpg in Resources */,
 				EA5D132620A3DC4D00CDB45A /* 55705458-26F2-49F4-89D8-6CB12F29C312.png in Resources */,
 				EA8C6C0E20A1346600AA77B2 /* LoginViewController.xib in Resources */,
-				EA8C6C1020A138EA00AA77B2 /* 6D12DD4F91443626ECEBD8FE0027800C.jpg in Resources */,
 				EA5D132E20A3DC4D00CDB45A /* 8C044C3B-5C01-4A48-8BCE-7AC58F3C3F99.png in Resources */,
 				EA5D132220A3DC4D00CDB45A /* 3BBCBDA9-CFE1-4E6C-93EA-6F767F4C03BE.png in Resources */,
 				EA5D133420A3DC4D00CDB45A /* B029713A-7F01-4477-AEB2-E1FBB20EE04C.png in Resources */,
@@ -357,6 +360,7 @@
 				EA8AADE51F555DF0000B706F /* LaunchScreen.storyboard in Resources */,
 				EA5D132820A3DC4D00CDB45A /* 786C1D65-926B-4236-B1CB-78D18E7C54B9.png in Resources */,
 				EA5D133920A3DC4D00CDB45A /* 3974DA5C-82F0-4F80-884E-587AFECCAE43.png in Resources */,
+				EACE532420A5687200893628 /* 750_1334.png in Resources */,
 				EA8AADE21F555DF0000B706F /* Assets.xcassets in Resources */,
 				EA5D133720A3DC4D00CDB45A /* 6B8E8DAB-11FB-4BE0-8478-1B99A67D6456.png in Resources */,
 				EA5D131E20A3DC4D00CDB45A /* E7A16049-D42A-443B-BA5E-5DE33E245C98.png in Resources */,
@@ -517,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Swift4Learn/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
@@ -531,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Swift4Learn/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;

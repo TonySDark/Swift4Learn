@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Swift4Learn" customModuleProvider="target">
             <connections>
                 <outlet property="accountTextF" destination="xEp-sW-lzd" id="lRu-FF-7pG"/>
+                <outlet property="loginBtn" destination="yTg-6t-if4" id="7vB-km-ZF2"/>
                 <outlet property="passwordTextF" destination="FXd-UU-a0X" id="Fqe-VQ-Ga9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6D12DD4F91443626ECEBD8FE0027800C.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ayf-Hf-nTv">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="750_1334.png" translatesAutoresizingMaskIntoConstraints="NO" id="ayf-Hf-nTv">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a gift for you!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SY-cb-ADP">
@@ -56,7 +57,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的生日" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FXd-UU-a0X">
-                    <rect key="frame" x="115" y="405" width="178" height="30"/>
+                    <rect key="frame" x="115" y="405" width="177.5" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
@@ -67,6 +68,19 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTg-6t-if4">
+                    <rect key="frame" x="123" y="457" width="129" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="ez4-QO-AJP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="psw_loginAction:" destination="-1" eventType="touchDown" id="GBf-YW-u2F"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -76,7 +90,9 @@
                 <constraint firstItem="xEp-sW-lzd" firstAttribute="trailing" secondItem="dEK-x2-OYY" secondAttribute="trailing" id="5CA-g5-W6d"/>
                 <constraint firstItem="log-Hi-Q6z" firstAttribute="leading" secondItem="hbb-R3-rTz" secondAttribute="leading" id="BcP-XL-LJF"/>
                 <constraint firstAttribute="trailing" secondItem="ayf-Hf-nTv" secondAttribute="trailing" id="CcG-ZF-VLd"/>
+                <constraint firstItem="yTg-6t-if4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="123" id="Eoe-DM-bmJ"/>
                 <constraint firstItem="xEp-sW-lzd" firstAttribute="leading" secondItem="hbb-R3-rTz" secondAttribute="trailing" constant="8" symbolic="YES" id="Fp0-Nr-boC"/>
+                <constraint firstItem="yTg-6t-if4" firstAttribute="top" secondItem="FXd-UU-a0X" secondAttribute="bottom" constant="22" id="MQM-gg-EBr"/>
                 <constraint firstItem="ayf-Hf-nTv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MUL-VO-Yc7"/>
                 <constraint firstItem="hbb-R3-rTz" firstAttribute="leading" secondItem="dEK-x2-OYY" secondAttribute="leading" id="QIA-sX-kW6"/>
                 <constraint firstItem="2SY-cb-ADP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="62" id="SQ6-ap-qFr"/>
@@ -84,6 +100,7 @@
                 <constraint firstItem="2SY-cb-ADP" firstAttribute="trailing" secondItem="dEK-x2-OYY" secondAttribute="trailing" id="VuN-Hh-PYz"/>
                 <constraint firstItem="dEK-x2-OYY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="160" id="bCZ-Ot-tpo"/>
                 <constraint firstItem="ayf-Hf-nTv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cFU-PM-iy1"/>
+                <constraint firstItem="yTg-6t-if4" firstAttribute="centerX" secondItem="ayf-Hf-nTv" secondAttribute="centerX" id="dce-Gi-RSK"/>
                 <constraint firstItem="FXd-UU-a0X" firstAttribute="leading" secondItem="xEp-sW-lzd" secondAttribute="leading" id="eE8-k3-c2S"/>
                 <constraint firstItem="ayf-Hf-nTv" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="fSC-hI-ywW"/>
                 <constraint firstItem="FXd-UU-a0X" firstAttribute="trailing" secondItem="xEp-sW-lzd" secondAttribute="trailing" id="tic-i0-i5p"/>
@@ -96,6 +113,6 @@
         </view>
     </objects>
     <resources>
-        <image name="6D12DD4F91443626ECEBD8FE0027800C.jpg" width="750" height="1334"/>
+        <image name="750_1334.png" width="750" height="1334"/>
     </resources>
 </document>

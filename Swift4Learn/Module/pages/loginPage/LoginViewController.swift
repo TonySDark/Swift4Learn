@@ -14,16 +14,34 @@ class LoginViewController: BaseViewController {
      */
     @IBOutlet weak var accountTextF: UITextField!
     @IBOutlet weak var passwordTextF: UITextField!
+    @IBOutlet weak var loginBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBAction func psw_loginAction(_ sender: UIButton) {
+        //判断账号密码才能进入
+        if ((accountTextF.text?.compare("account")) != nil) {
+            
+        }else{
+            return;
+        }
+        if ((passwordTextF.text?.compare("pwd")) != nil) {
+            
+        }else{
+            return;
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }

@@ -16,8 +16,19 @@ enum CSWE_ButtonTypeEnum {
 }
 class CSW_ButtonType: NSObject {
     func initWith(config:Dictionary<String, String>) -> CSW_ButtonType {
-        //TODO 根据type匹配
-        return self
+        //根据type匹配
+        let btnType:CSW_ButtonType = CSW_ButtonType.init()
+
+        
+//        if textOnly {
+//
+//        }else if imageOnly{
+//
+//        }else{//textAndImage
+//
+//        }
+        
+        return btnType
     }
 }
 
