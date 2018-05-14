@@ -46,7 +46,7 @@
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的昵称" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xEp-sW-lzd">
                     <rect key="frame" x="115" y="367" width="177.5" height="30"/>
-                    <color key="textColor" red="0.68894759316593179" green="1" blue="0.57314128538415821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                 </textField>
@@ -68,15 +68,22 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTg-6t-if4">
-                    <rect key="frame" x="123" y="457" width="129" height="37"/>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTg-6t-if4">
+                    <rect key="frame" x="123" y="470" width="129" height="37"/>
+                    <color key="backgroundColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="37" id="ez4-QO-AJP"/>
+                        <constraint firstAttribute="height" constant="37" id="SbO-hP-Jv6"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <state key="normal" title="登录">
+                    <state key="normal" title="登    录">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="psw_loginAction:" destination="-1" eventType="touchDown" id="GBf-YW-u2F"/>
                     </connections>
@@ -90,19 +97,19 @@
                 <constraint firstItem="xEp-sW-lzd" firstAttribute="trailing" secondItem="dEK-x2-OYY" secondAttribute="trailing" id="5CA-g5-W6d"/>
                 <constraint firstItem="log-Hi-Q6z" firstAttribute="leading" secondItem="hbb-R3-rTz" secondAttribute="leading" id="BcP-XL-LJF"/>
                 <constraint firstAttribute="trailing" secondItem="ayf-Hf-nTv" secondAttribute="trailing" id="CcG-ZF-VLd"/>
-                <constraint firstItem="yTg-6t-if4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="123" id="Eoe-DM-bmJ"/>
                 <constraint firstItem="xEp-sW-lzd" firstAttribute="leading" secondItem="hbb-R3-rTz" secondAttribute="trailing" constant="8" symbolic="YES" id="Fp0-Nr-boC"/>
-                <constraint firstItem="yTg-6t-if4" firstAttribute="top" secondItem="FXd-UU-a0X" secondAttribute="bottom" constant="22" id="MQM-gg-EBr"/>
                 <constraint firstItem="ayf-Hf-nTv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MUL-VO-Yc7"/>
                 <constraint firstItem="hbb-R3-rTz" firstAttribute="leading" secondItem="dEK-x2-OYY" secondAttribute="leading" id="QIA-sX-kW6"/>
                 <constraint firstItem="2SY-cb-ADP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="62" id="SQ6-ap-qFr"/>
                 <constraint firstItem="FXd-UU-a0X" firstAttribute="top" secondItem="xEp-sW-lzd" secondAttribute="bottom" constant="8" symbolic="YES" id="VfK-ye-ZMU"/>
                 <constraint firstItem="2SY-cb-ADP" firstAttribute="trailing" secondItem="dEK-x2-OYY" secondAttribute="trailing" id="VuN-Hh-PYz"/>
+                <constraint firstItem="yTg-6t-if4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="123" id="XH1-SO-ZlB"/>
                 <constraint firstItem="dEK-x2-OYY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="160" id="bCZ-Ot-tpo"/>
                 <constraint firstItem="ayf-Hf-nTv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cFU-PM-iy1"/>
-                <constraint firstItem="yTg-6t-if4" firstAttribute="centerX" secondItem="ayf-Hf-nTv" secondAttribute="centerX" id="dce-Gi-RSK"/>
                 <constraint firstItem="FXd-UU-a0X" firstAttribute="leading" secondItem="xEp-sW-lzd" secondAttribute="leading" id="eE8-k3-c2S"/>
                 <constraint firstItem="ayf-Hf-nTv" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="fSC-hI-ywW"/>
+                <constraint firstItem="yTg-6t-if4" firstAttribute="centerX" secondItem="ayf-Hf-nTv" secondAttribute="centerX" id="rbI-2z-mrX"/>
+                <constraint firstItem="yTg-6t-if4" firstAttribute="top" secondItem="FXd-UU-a0X" secondAttribute="bottom" constant="35" id="shV-M5-M1o"/>
                 <constraint firstItem="FXd-UU-a0X" firstAttribute="trailing" secondItem="xEp-sW-lzd" secondAttribute="trailing" id="tic-i0-i5p"/>
                 <constraint firstItem="2SY-cb-ADP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="55" id="tpf-gh-gMz"/>
                 <constraint firstItem="2SY-cb-ADP" firstAttribute="leading" secondItem="dEK-x2-OYY" secondAttribute="leading" id="uF4-ng-mJh"/>

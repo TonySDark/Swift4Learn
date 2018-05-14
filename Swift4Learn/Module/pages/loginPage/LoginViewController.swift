@@ -9,6 +9,9 @@
 import UIKit
 
 class LoginViewController: BaseViewController {
+    @objc let account = "account"
+    @objc let password = "password"
+    
     /*  5.9
      嗯，相对于OC的xib的在m文件的声明，多了一些修饰，这也是必要的，毕竟h文件没了
      */
@@ -18,7 +21,7 @@ class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+ 
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,17 +34,33 @@ class LoginViewController: BaseViewController {
     }
     @IBAction func psw_loginAction(_ sender: UIButton) {
         //判断账号密码才能进入
-        if ((accountTextF.text?.compare("account")) != nil) {
-            
+        if (accountTextF.text == "mm") {
+            //账号通过
         }else{
+            self.showWarning()
             return;
         }
-        if ((passwordTextF.text?.compare("pwd")) != nil) {
-            
+        if (passwordTextF.text == "123456") {
+            //密码通过
         }else{
+            self.showWarning()
             return;
         }
-        self.dismiss(animated: true, completion: nil)
+        let guideVC =  GuideViewController.init()
+        // 这个默认是 protected 还是 public呢？
+        guideVC.goAheadAciton()
+        self.view.window?.rootViewController = guideVC;
     }
-
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        accountTextF.resignFirstResponder()
+        passwordTextF.resignFirstResponder()
+    }
+    
+    /// 简单的提示信息
+    func showWarning() {
+        accountTextF.text = "X安全措施100保护中X";
+        passwordTextF.text = "你是谁呀？=.=";
+    }
 }

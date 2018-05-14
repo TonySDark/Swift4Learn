@@ -42,10 +42,10 @@ class BaseViewController: UIViewController,CSW_BaseViewControllerProtocol {
         // Pass the selected object to the new view controller.
     }
     */
-    func o_csw_pushToController(controller: BaseViewController, toController: BaseViewController) -> Bool {
+    @objc func o_csw_pushToController(controller: BaseViewController, toController: BaseViewController) -> Bool {
         return true
     }
-    func o_csw_modalToController(controller:BaseViewController,toController:BaseViewController) -> Bool{
+    @objc func o_csw_modalToController(controller:BaseViewController,toController:BaseViewController) -> Bool{
         return true
     }
 

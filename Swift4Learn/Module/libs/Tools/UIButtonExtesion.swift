@@ -15,7 +15,7 @@ enum CSWE_ButtonTypeEnum {
     
 }
 class CSW_ButtonType: NSObject {
-    func initWith(config:Dictionary<String, String>) -> CSW_ButtonType {
+    @objc func initWith(config:Dictionary<String, String>) -> CSW_ButtonType {
         //根据type匹配
         let btnType:CSW_ButtonType = CSW_ButtonType.init()
 

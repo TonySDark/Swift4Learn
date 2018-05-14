@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
 @UIApplicationMain
+//main函数入口 嗯，main.m 没了,所以最多的头疼的崩溃点在这里
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -16,9 +16,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //swift UserDefaults <==> Object-C NSUserDefaults
+        //读取存储信息
+        //这里存在一个技巧 这个时候 userDefaults里边是没有 ”isFirst“对应的值的
         
         
+        /*
+         +standardUserDefaults returns a global instance of NSUserDefaults configured to search the current application's search list.
+         */
+        let userDefaults:UserDefaults =  UserDefaults.standard
         
+        UserDefaults.resetStandardUserDefaults()
+        //        so         UserDefaults.resetStandardUserDefaults() 啥意思
+        //TODO 需要深入   重置？ 有点意思 
+
+        let isFirst:Bool = userDefaults.bool(forKey: "isFirst")
+        if isFirst == false {
+            let loginVC = LoginViewController.init()
+            self.window?.rootViewController = loginVC
+        }else{
+         //设置同步
+            let homeVC =  HomeViewController.init()
+            self.window?.rootViewController = homeVC
+        }
+    
         return true
     }
 
