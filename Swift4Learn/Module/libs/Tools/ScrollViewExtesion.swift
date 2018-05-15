@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 extension UIScrollView{
     
-    @objc static func initWith(frame:CGRect,
+    static func initWith(frame:CGRect,
                          delegate:UIScrollViewDelegate,
                          contentSize:CGSize
                          ) -> UIScrollView {

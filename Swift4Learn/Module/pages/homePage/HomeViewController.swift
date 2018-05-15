@@ -28,18 +28,19 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     func addNavigationBar(){
         self.navigationController?
         .navigationBar.backgroundColor = UIColor.black
-        
+        self.title = "时光"
     }
     func viewConfig() -> Void {
         // 代码规范写的很痛苦  看的比较舒畅
-        _tableView = UITableView.init(frame:
-                     CGRect.init(x: 0,
-                                 y: 0,
-                                 width: kScreenWidth,
-                                 height: kScreenHeight),
-                                 style: UITableViewStyle.plain)
-        _tableView.delegate = self as! UITableViewDelegate;
-        _tableView.dataSource = self as! UITableViewDataSource;
+        _tableView = UITableView.init(
+                        frame:CGRect.init(x: 0,
+                                          y: 0,
+                                          width: kScreenWidth,
+                                          height: kScreenHeight
+                        ),
+                        style: UITableViewStyle.plain)
+        _tableView.delegate = self as UITableViewDelegate;
+        _tableView.dataSource = self as UITableViewDataSource;
         _tableView.rowHeight = 90.0;
         self.view.addSubview(_tableView)
     }

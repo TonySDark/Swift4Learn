@@ -62,6 +62,9 @@
 		EABB42D320A92B6D0036E241 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABB42D220A92B6D0036E241 /* constant.swift */; };
 		EACE532320A5687200893628 /* 640_960.png in Resources */ = {isa = PBXBuildFile; fileRef = EACE532120A5687200893628 /* 640_960.png */; };
 		EACE532420A5687200893628 /* 750_1334.png in Resources */ = {isa = PBXBuildFile; fileRef = EACE532220A5687200893628 /* 750_1334.png */; };
+		EADAF3E320AA8C9D00DD577C /* OldTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAF3E220AA8C9D00DD577C /* OldTimeTableViewCell.swift */; };
+		EADAF3E520AA8EBB00DD577C /* PopularViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAF3E420AA8EBB00DD577C /* PopularViewExtension.swift */; };
+		EADAF3E720AAA22100DD577C /* TimeTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADAF3E620AAA22100DD577C /* TimeTableHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +126,9 @@
 		EABB42D520A92C120036E241 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		EACE532120A5687200893628 /* 640_960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 640_960.png; sourceTree = "<group>"; };
 		EACE532220A5687200893628 /* 750_1334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 750_1334.png; sourceTree = "<group>"; };
+		EADAF3E220AA8C9D00DD577C /* OldTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldTimeTableViewCell.swift; sourceTree = "<group>"; };
+		EADAF3E420AA8EBB00DD577C /* PopularViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewExtension.swift; sourceTree = "<group>"; };
+		EADAF3E620AAA22100DD577C /* TimeTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,7 @@
 				EA5D133F20A3E2AD00CDB45A /* ModelPrase.swift */,
 				EA5D134220A4121200CDB45A /* ScrollViewExtesion.swift */,
 				EA5D134420A4188100CDB45A /* UIButtonExtesion.swift */,
+				EADAF3E420AA8EBB00DD577C /* PopularViewExtension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -178,6 +185,7 @@
 		EA869E6820A2A6A40061FE55 /* homePage */ = {
 			isa = PBXGroup;
 			children = (
+				EADAF3DE20AA8C4600DD577C /* views */,
 				EA8AADDC1F555DF0000B706F /* HomeViewController.swift */,
 			);
 			path = homePage;
@@ -313,6 +321,23 @@
 			path = "../../../../旧时光资源";
 			sourceTree = "<group>";
 		};
+		EADAF3DE20AA8C4600DD577C /* views */ = {
+			isa = PBXGroup;
+			children = (
+				EADAF3DF20AA8C5500DD577C /* cells */,
+				EADAF3E620AAA22100DD577C /* TimeTableHeaderView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		EADAF3DF20AA8C5500DD577C /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				EADAF3E220AA8C9D00DD577C /* OldTimeTableViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,13 +455,16 @@
 			files = (
 				EA5D12F720A3DB4F00CDB45A /* BaseViewController.swift in Sources */,
 				EA5D12F920A3DB6400CDB45A /* BasePresenter.swift in Sources */,
+				EADAF3E720AAA22100DD577C /* TimeTableHeaderView.swift in Sources */,
 				EA8C6C0D20A1346600AA77B2 /* LoginViewController.swift in Sources */,
 				EA5D12F520A3DB2400CDB45A /* GuideViewController.swift in Sources */,
 				EA5D134320A4121200CDB45A /* ScrollViewExtesion.swift in Sources */,
 				EA5D134520A4188100CDB45A /* UIButtonExtesion.swift in Sources */,
 				EA8AADDD1F555DF0000B706F /* HomeViewController.swift in Sources */,
 				EABB42D320A92B6D0036E241 /* constant.swift in Sources */,
+				EADAF3E520AA8EBB00DD577C /* PopularViewExtension.swift in Sources */,
 				EA8AADDB1F555DF0000B706F /* AppDelegate.swift in Sources */,
+				EADAF3E320AA8C9D00DD577C /* OldTimeTableViewCell.swift in Sources */,
 				EA5D134020A3E2AD00CDB45A /* ModelPrase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
