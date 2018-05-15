@@ -47,7 +47,7 @@ class LoginViewController: BaseViewController {
             return;
         }
         let guideVC =  GuideViewController.init()
-        // 这个默认是 protected 还是 public呢？
+        // 这个默认是 protected/？ 还是 public/open呢？
         guideVC.goAheadAciton()
         self.view.window?.rootViewController = guideVC;
     }
