@@ -33,15 +33,13 @@ class GuideViewController: BaseViewController,UIScrollViewDelegate {
         //here，你一定会问我 _ x:类型 这是啥  ---》
         //after，你一定又会问我 x:类型！ 这是啥  ---》直观上检查数据类型，必须有值（于是就会经常遇上2种错误：编译错误和runtime错误，you'll find it!）
         //After that， 后你一定还会问我 x:类型？ 这是啥  ---》直观上检查数据类型之可以为nil
-        //After that，你一定更会问我 self as! UIScrollViewDelegate？ 这是啥  ---》  直观就是说 谁要作为代理人 代理方法必须有 设置代理你可以设置nil
-        //因为swift是强类型语言，类型检查的强大！！
-        
+        //After that，你一定更会问我 self as UIScrollViewDelegate 这是啥  ---》  直观就是说 谁要作为代理人
         let scrollView:UIScrollView! = UIScrollView.initWith(
             frame:(CGRect.init(x: 0,
                                y: 0,
                                width: kScreenWidth,
                                height: kScreenHeight)),
-            delegate: (self as UIScrollViewDelegate),
+            delegate: self as UIScrollViewDelegate,
             contentSize: CGSize.init(width: kScreenWidth*CGFloat(guidePicArr.count), height: kScreenHeight))
         scrollView.bounces = false
         scrollView.isPagingEnabled = true
