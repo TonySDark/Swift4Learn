@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA30545520ABC67C00B81C40 /* Swift4LearnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30545420ABC67C00B81C40 /* Swift4LearnUITests.swift */; };
 		EA30546320ABC68600B81C40 /* Swift4LearnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30546220ABC68600B81C40 /* Swift4LearnTests.swift */; };
+		EA30547920ABD13800B81C40 /* libTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA30543420ABC29500B81C40 /* libTools.a */; };
 		EA5D12F520A3DB2400CDB45A /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D12F420A3DB2400CDB45A /* GuideViewController.swift */; };
 		EA5D12F720A3DB4F00CDB45A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D12F620A3DB4F00CDB45A /* BaseViewController.swift */; };
 		EA5D12F920A3DB6400CDB45A /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D12F820A3DB6400CDB45A /* BasePresenter.swift */; };
@@ -106,6 +107,7 @@
 		EA30546020ABC68600B81C40 /* Swift4LearnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift4LearnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA30546220ABC68600B81C40 /* Swift4LearnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift4LearnTests.swift; sourceTree = "<group>"; };
 		EA30546420ABC68600B81C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA30547B20ABD15F00B81C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5D12F420A3DB2400CDB45A /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		EA5D12F620A3DB4F00CDB45A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EA5D12F820A3DB6400CDB45A /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA30547920ABD13800B81C40 /* libTools.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +220,23 @@
 				EA30546420ABC68600B81C40 /* Info.plist */,
 			);
 			path = Swift4LearnTests;
+			sourceTree = "<group>";
+		};
+		EA30547820ABD13800B81C40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA30547A20ABD15F00B81C40 /* ToolResource */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA30547A20ABD15F00B81C40 /* ToolResource */ = {
+			isa = PBXGroup;
+			children = (
+				EA30547B20ABD15F00B81C40 /* Info.plist */,
+			);
+			name = ToolResource;
+			path = Tools/ToolResource;
 			sourceTree = "<group>";
 		};
 		EA5D12F320A3DAE500CDB45A /* guidePage */ = {
@@ -277,6 +297,7 @@
 				EA30545320ABC67C00B81C40 /* Swift4LearnUITests */,
 				EA30546120ABC68600B81C40 /* Swift4LearnTests */,
 				EA8AADD81F555DF0000B706F /* Products */,
+				EA30547820ABD13800B81C40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

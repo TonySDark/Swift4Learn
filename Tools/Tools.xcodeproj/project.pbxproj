@@ -9,16 +9,29 @@
 /* Begin PBXBuildFile section */
 		EA30544820ABC31A00B81C40 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30544720ABC31A00B81C40 /* Tools.swift */; };
 		EA30546B20ABCCAE00B81C40 /* libTools.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA30544420ABC31A00B81C40 /* libTools.a */; };
+		EA30547D20ABD18A00B81C40 /* 哼.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA30547C20ABD18A00B81C40 /* 哼.jpg */; };
+		EA30547E20ABD19C00B81C40 /* 哼.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA30547C20ABD18A00B81C40 /* 哼.jpg */; };
+		EA30548020ABD54100B81C40 /* scheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA30547F20ABD54100B81C40 /* scheme.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EA30544220ABC31A00B81C40 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "$(SRCROOT)";
+			dstPath = "$(SRCROOT)/libTools.a";
 			dstSubfolderSpec = 0;
 			files = (
 				EA30546B20ABCCAE00B81C40 /* libTools.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA30547720ABCE8A00B81C40 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SRCROOT)/ToolResource.bundle";
+			dstSubfolderSpec = 0;
+			files = (
+				EA30547E20ABD19C00B81C40 /* 哼.jpg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -27,10 +40,21 @@
 /* Begin PBXFileReference section */
 		EA30544420ABC31A00B81C40 /* libTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA30544720ABC31A00B81C40 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		EA30547020ABCE5200B81C40 /* ToolResource.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolResource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA30547220ABCE5200B81C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA30547C20ABD18A00B81C40 /* 哼.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "哼.jpg"; sourceTree = "<group>"; };
+		EA30547F20ABD54100B81C40 /* scheme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scheme.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EA30544120ABC31A00B81C40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA30546D20ABCE5200B81C40 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				EA30544620ABC31A00B81C40 /* Tools */,
+				EA30547120ABCE5200B81C40 /* ToolResource */,
 				EA30544520ABC31A00B81C40 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				EA30544420ABC31A00B81C40 /* libTools.a */,
+				EA30547020ABCE5200B81C40 /* ToolResource.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +88,16 @@
 				EA30544720ABC31A00B81C40 /* Tools.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		EA30547120ABCE5200B81C40 /* ToolResource */ = {
+			isa = PBXGroup;
+			children = (
+				EA30547F20ABD54100B81C40 /* scheme.png */,
+				EA30547C20ABD18A00B81C40 /* 哼.jpg */,
+				EA30547220ABCE5200B81C40 /* Info.plist */,
+			);
+			path = ToolResource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +120,24 @@
 			productReference = EA30544420ABC31A00B81C40 /* libTools.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		EA30546F20ABCE5200B81C40 /* ToolResource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA30547320ABCE5200B81C40 /* Build configuration list for PBXNativeTarget "ToolResource" */;
+			buildPhases = (
+				EA30546C20ABCE5200B81C40 /* Sources */,
+				EA30546D20ABCE5200B81C40 /* Frameworks */,
+				EA30546E20ABCE5200B81C40 /* Resources */,
+				EA30547720ABCE8A00B81C40 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToolResource;
+			productName = ToolResource;
+			productReference = EA30547020ABCE5200B81C40 /* ToolResource.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +149,9 @@
 				ORGANIZATIONNAME = com.buyal;
 				TargetAttributes = {
 					EA30544320ABC31A00B81C40 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					EA30546F20ABCE5200B81C40 = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
@@ -112,9 +169,22 @@
 			projectRoot = "";
 			targets = (
 				EA30544320ABC31A00B81C40 /* Tools */,
+				EA30546F20ABCE5200B81C40 /* ToolResource */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA30546E20ABCE5200B81C40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA30547D20ABD18A00B81C40 /* 哼.jpg in Resources */,
+				EA30548020ABD54100B81C40 /* scheme.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA30544020ABC31A00B81C40 /* Sources */ = {
@@ -122,6 +192,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA30544820ABC31A00B81C40 /* Tools.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA30546C20ABCE5200B81C40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +343,40 @@
 			};
 			name = Release;
 		};
+		EA30547420ABCE5200B81C40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ToolResource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.buyal.ToolResource;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		EA30547520ABCE5200B81C40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ToolResource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.buyal.ToolResource;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -283,6 +394,15 @@
 			buildConfigurations = (
 				EA30544C20ABC31A00B81C40 /* Debug */,
 				EA30544D20ABC31A00B81C40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA30547320ABCE5200B81C40 /* Build configuration list for PBXNativeTarget "ToolResource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA30547420ABCE5200B81C40 /* Debug */,
+				EA30547520ABCE5200B81C40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
