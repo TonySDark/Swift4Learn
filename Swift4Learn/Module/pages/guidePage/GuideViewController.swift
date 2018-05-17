@@ -28,11 +28,9 @@ class GuideViewController: BaseViewController,UIScrollViewDelegate {
             "16A55A11CFF1A472A2B56B721618D445.jpg",
             "194FC7F20160842B92F847D27BC9695D.jpg",
             "1201CE9EBF1BF41FCE6273380881046A.jpg"]
-        //你一定会问我系列套餐
+        //你一定会问我系列套餐：constant.swift
         //? 和 ! 其实分别是Swift语言中对一种可选类型（ Optional) 操作的语法。一个没赋值 一个 赋值了
-        //here，你一定会问我 _ x:类型 这是啥  ---》
-        //after，你一定又会问我 x:类型！ 这是啥  ---》直观上检查数据类型，必须有值（于是就会经常遇上2种错误：编译错误和runtime错误，you'll find it!）
-        //After that， 后你一定还会问我 x:类型？ 这是啥  ---》直观上检查数据类型之可以为nil
+        //After that， 后你一定还会问我 x:类型？ 这是啥
         //After that，你一定更会问我 self as UIScrollViewDelegate 这是啥  ---》  直观就是说 谁要作为代理人
         let scrollView:UIScrollView! = UIScrollView.initWith(
             frame:(CGRect.init(x: 0,
@@ -58,14 +56,13 @@ class GuideViewController: BaseViewController,UIScrollViewDelegate {
             imageView.isUserInteractionEnabled = true
             imageView.image = UIImage.init(
                                     named: string)
-            
             scrollView .addSubview(imageView)
             if num == (guidePicArr.count - 1){
                 let btn = UIButton.init(type: UIButtonType.custom)
                 btn.frame = CGRect.init(x: kScreenWidth/2-45, y: kScreenHeight-230, width: 180, height: 80)
                 btn.backgroundColor = UIColor.clear
                 btn.setTitle("我们开始吧～", for: UIControlState.normal)
-                btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 21)
+                btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
                 btn.setTitleColor(UIColor.brown, for:UIControlState.normal)
                 // 注意状态值：swift 是结构体的使用
 //                    Selector  swift 是结构体的使用

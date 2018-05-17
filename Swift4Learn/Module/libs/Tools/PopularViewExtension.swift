@@ -29,8 +29,8 @@ extension UIView:CSW_CustomViewProtocol{
 //        view.backgroundColor = backgroundColor
 //    }
  
-    
-   open func parentViewclearAllChildViews(_ parentView: UIView?) {
+   // 这里需要添加  @objc ， 不然子类继承重写时会有编译红：swift不支持对非@objc修饰方法的重写
+   @objc open func parentViewclearAllChildViews(_ parentView: UIView?) {
         if parentView == nil {
             for childView:UIView in self.subviews {
                 childView.removeFromSuperview()
@@ -42,7 +42,7 @@ extension UIView:CSW_CustomViewProtocol{
         }
     }
 
-    open func parentViewAddAllChildViews(_ parentView: UIView?){
+    @objc open func parentViewAddAllChildViews(_ parentView: UIView?){
         // 需要子类实现
     }
     

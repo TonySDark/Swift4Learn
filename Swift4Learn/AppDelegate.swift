@@ -26,11 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          */
         let userDefaults:UserDefaults =  UserDefaults.standard
         
-        UserDefaults.resetStandardUserDefaults()
-        //        so         UserDefaults.resetStandardUserDefaults() 啥意思
-        //TODO 需要深入   重置？ 有点意思 
+        //UserDefaults.resetStandardUserDefaults() 重置？ 有点意思
+        //TODO 需要深入
 
-        let isFirst:Bool = userDefaults.bool(forKey: "isFirst")
+        let isFirst:Bool = userDefaults.bool(forKey: "isNotFirst")
         if isFirst == false {
             let loginVC = LoginViewController.init()
             self.window?.rootViewController = loginVC
