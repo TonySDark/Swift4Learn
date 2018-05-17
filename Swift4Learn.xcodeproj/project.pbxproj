@@ -178,6 +178,7 @@
 		EADB272420AD6C8800E16A47 /* 哼.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "哼.jpg"; sourceTree = "<group>"; };
 		EADB272520AD6C8800E16A47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EADB272620AD6C8800E16A47 /* scheme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scheme.png; sourceTree = "<group>"; };
+		EADB272A20AD6E9400E16A47 /* ToolResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ToolResource.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +235,7 @@
 		EA30547820ABD13800B81C40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EADB272A20AD6E9400E16A47 /* ToolResource.bundle */,
 				EADB272320AD6C8800E16A47 /* ToolResource */,
 			);
 			name = Frameworks;

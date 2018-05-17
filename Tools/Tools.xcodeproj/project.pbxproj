@@ -19,7 +19,7 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(SRCROOT)/libTools.a";
-			dstSubfolderSpec = 16;
+			dstSubfolderSpec = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -28,7 +28,7 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "$(SRCROOT)/ToolResource.bundle";
-			dstSubfolderSpec = 16;
+			dstSubfolderSpec = 0;
 			files = (
 				EADB271C20AD652E00E16A47 /* 哼.jpg in CopyFiles */,
 				EADB271B20AD652A00E16A47 /* scheme.png in CopyFiles */,
