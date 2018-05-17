@@ -14,7 +14,7 @@ extension UIScrollView{
                          delegate:UIScrollViewDelegate,
                          contentSize:CGSize
                          ) -> UIScrollView {
-        var scrollView = UIScrollView.init(frame: frame)
+        let scrollView = UIScrollView.init(frame: frame)
         scrollView.delegate = delegate
         scrollView.contentSize = contentSize
         return scrollView;

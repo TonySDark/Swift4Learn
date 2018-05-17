@@ -16,6 +16,7 @@
 		EA5D134020A3E2AD00CDB45A /* ModelPrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D133F20A3E2AD00CDB45A /* ModelPrase.swift */; };
 		EA5D134320A4121200CDB45A /* ScrollViewExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D134220A4121200CDB45A /* ScrollViewExtesion.swift */; };
 		EA5D134520A4188100CDB45A /* UIButtonExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D134420A4188100CDB45A /* UIButtonExtesion.swift */; };
+		EA609C2C20AD75C700AD6869 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA609C2B20AD75C700AD6869 /* MusicPlayerViewController.swift */; };
 		EA8AADDB1F555DF0000B706F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8AADDA1F555DF0000B706F /* AppDelegate.swift */; };
 		EA8AADDD1F555DF0000B706F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8AADDC1F555DF0000B706F /* HomeViewController.swift */; };
 		EA8AADE01F555DF0000B706F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8AADDE1F555DF0000B706F /* Main.storyboard */; };
@@ -118,6 +119,7 @@
 		EA5D133F20A3E2AD00CDB45A /* ModelPrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPrase.swift; sourceTree = "<group>"; };
 		EA5D134220A4121200CDB45A /* ScrollViewExtesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewExtesion.swift; sourceTree = "<group>"; };
 		EA5D134420A4188100CDB45A /* UIButtonExtesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtesion.swift; sourceTree = "<group>"; };
+		EA609C2B20AD75C700AD6869 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		EA8AADD71F555DF0000B706F /* Swift4Learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift4Learn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8AADDA1F555DF0000B706F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA8AADDC1F555DF0000B706F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				EA8AADDC1F555DF0000B706F /* HomeViewController.swift */,
 				EADB271420AD5E4900E16A47 /* VideoShowViewController.swift */,
 				EADB271520AD5E4900E16A47 /* VideoShowViewController.xib */,
+				EA609C2B20AD75C700AD6869 /* MusicPlayerViewController.swift */,
 			);
 			path = homePage;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				EA5D12F520A3DB2400CDB45A /* GuideViewController.swift in Sources */,
 				EA5D134320A4121200CDB45A /* ScrollViewExtesion.swift in Sources */,
 				EA5D134520A4188100CDB45A /* UIButtonExtesion.swift in Sources */,
+				EA609C2C20AD75C700AD6869 /* MusicPlayerViewController.swift in Sources */,
 				EA8AADDD1F555DF0000B706F /* HomeViewController.swift in Sources */,
 				EABB42D320A92B6D0036E241 /* constant.swift in Sources */,
 				EADB271620AD5E4900E16A47 /* VideoShowViewController.swift in Sources */,

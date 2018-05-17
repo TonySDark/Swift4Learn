@@ -29,7 +29,9 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         self.navigationController?
         .navigationBar.backgroundColor = UIColor.black
         self.title = "时光"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem:.add, target: self, action: Selector("buttonAddPicture"))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem:.add,
+                                 target: self,
+                                 action: Selector("buttonAddPicture"))
     }
     func viewConfig() -> Void {
         autoreleasepool {
@@ -47,7 +49,15 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
             _tableView.rowHeight = 90.0;
             self.view.addSubview(_tableView)
             
-            var tabHeaderView = TimeTableHeaderView.initWith(frame: (CGRect.init(x: 0, y: 0, width: kScreenWidth, height: kScreenWidth/2)), backgroundColor: (UIColor.white))
+            let tabHeaderView = TimeTableHeaderView
+                                .initWith(frame: (CGRect
+                                                  .init(x: 0,
+                                                        y: 0,
+                                                        width:
+                                                    kScreenWidth,
+                                                        height:
+                                                    kScreenWidth/2)),
+                                          backgroundColor: (UIColor.white))
             _tableView.tableHeaderView = tabHeaderView
         }
         
@@ -73,7 +83,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         var cell = tableView
             .dequeueReusableCell(withIdentifier: reuseStr)
         if cell == nil {
-            cell = UITableViewCell.init(style: .default, reuseIdentifier: reuseStr)
+            cell = OldTimeTableViewCell.init(style:.default, reuseIdentifier: reuseStr)
         }
         
         return cell!;

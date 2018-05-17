@@ -20,6 +20,27 @@ class OldTimeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 
+    // 自定义的方法
+    override func parentViewAddAllChildViews(_ parentView: UIView?) {
+        autoreleasepool {
+            let picImgVw = UIImageView
+                           .init(frame: CGRect
+                                        .init(x: 0,
+                                              y: 0,
+                                              width: self.contentView.bounds.width,
+                                              height: self.contentView.bounds.height))
+            self.contentView .addSubview(picImgVw)
+            
+        }
+    }
+    
+    override func parentViewDidRefresh(_ parentView: UIView?, _ model: NSObject?) {
+       
+    
+    }
+    
+    
+    
+    
 }
