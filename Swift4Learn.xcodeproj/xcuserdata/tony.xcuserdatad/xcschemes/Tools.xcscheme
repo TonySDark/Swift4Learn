@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA30546F20ABCE5200B81C40"
-               BuildableName = "ToolResource.bundle"
-               BlueprintName = "ToolResource"
-               ReferencedContainer = "container:Tools.xcodeproj">
+               BlueprintIdentifier = "EA30544320ABC31A00B81C40"
+               BuildableName = "libTools.a"
+               BlueprintName = "Tools"
+               ReferencedContainer = "container:Tools/Tools.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA30546F20ABCE5200B81C40"
-            BuildableName = "ToolResource.bundle"
-            BlueprintName = "ToolResource"
-            ReferencedContainer = "container:Tools.xcodeproj">
+            BlueprintIdentifier = "EA30544320ABC31A00B81C40"
+            BuildableName = "libTools.a"
+            BlueprintName = "Tools"
+            ReferencedContainer = "container:Tools/Tools.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA30546F20ABCE5200B81C40"
-            BuildableName = "ToolResource.bundle"
-            BlueprintName = "ToolResource"
-            ReferencedContainer = "container:Tools.xcodeproj">
+            BlueprintIdentifier = "EA30544320ABC31A00B81C40"
+            BuildableName = "libTools.a"
+            BlueprintName = "Tools"
+            ReferencedContainer = "container:Tools/Tools.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

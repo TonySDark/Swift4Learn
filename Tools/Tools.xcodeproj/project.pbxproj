@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		EA30544820ABC31A00B81C40 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30544720ABC31A00B81C40 /* Tools.swift */; };
-		EA30546B20ABCCAE00B81C40 /* libTools.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA30544420ABC31A00B81C40 /* libTools.a */; };
 		EA30547D20ABD18A00B81C40 /* 哼.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA30547C20ABD18A00B81C40 /* 哼.jpg */; };
-		EA30547E20ABD19C00B81C40 /* 哼.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA30547C20ABD18A00B81C40 /* 哼.jpg */; };
 		EA30548020ABD54100B81C40 /* scheme.png in Resources */ = {isa = PBXBuildFile; fileRef = EA30547F20ABD54100B81C40 /* scheme.png */; };
+		EADB271B20AD652A00E16A47 /* scheme.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA30547F20ABD54100B81C40 /* scheme.png */; };
+		EADB271C20AD652E00E16A47 /* 哼.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA30547C20ABD18A00B81C40 /* 哼.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,19 +19,19 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(SRCROOT)/libTools.a";
-			dstSubfolderSpec = 0;
+			dstSubfolderSpec = 16;
 			files = (
-				EA30546B20ABCCAE00B81C40 /* libTools.a in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EA30547720ABCE8A00B81C40 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "$(SRCROOT)/ToolResource.bundle";
-			dstSubfolderSpec = 0;
+			dstSubfolderSpec = 16;
 			files = (
-				EA30547E20ABD19C00B81C40 /* 哼.jpg in CopyFiles */,
+				EADB271C20AD652E00E16A47 /* 哼.jpg in CopyFiles */,
+				EADB271B20AD652A00E16A47 /* scheme.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
