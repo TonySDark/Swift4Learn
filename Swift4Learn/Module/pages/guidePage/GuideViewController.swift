@@ -99,7 +99,7 @@ class GuideViewController: BaseViewController,UIScrollViewDelegate {
     
     
     @objc func goAheadAciton1(_:UIButton){
-        print(#function)
+        print(#function)//打印当前的方法
         let homeVC = HomeViewController.init()
         let navigationVC = UINavigationController.init(rootViewController: homeVC)
         self.view.window?.rootViewController = navigationVC;

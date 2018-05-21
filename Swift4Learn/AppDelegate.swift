@@ -36,7 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }else{
          //设置同步
             let homeVC =  HomeViewController.init()
-            self.window?.rootViewController = homeVC
+            let navigationVC = UINavigationController.init(rootViewController: homeVC)
+            self.window?.rootViewController = navigationVC
         }
     
         return true

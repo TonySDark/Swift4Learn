@@ -21,8 +21,8 @@ class TimeTableHeaderView: UIView {
     override func parentViewAddAllChildViews(_ parentView: UIView?) {
         autoreleasepool {
             let iconImgVw = UIImageView
-                            .init(frame:CGRect.init(x: 20,
-                                                    y: 20,
+                            .init(frame:CGRect.init(x: 30,
+                                                    y: 30,
                                                     width: 120,
                                                     height: 120))
             iconImgVw.image = UIImage
@@ -32,21 +32,33 @@ class TimeTableHeaderView: UIView {
             self.addSubview(iconImgVw)
             let nameLab = UILabel
                           .init(frame: CGRect.init(x:iconImgVw
-                                                     .frame.maxX+20,
+                                                     .frame.maxX+30,
                                                    y:iconImgVw
-                                                    .frame.minX+20,
+                                                    .frame.minY+50,
                                                    width: 200,
-                                                   height: 60))
-            nameLab.text = "MM"
+                                                   height: 20))
+            nameLab.text = "为美丽的世界献上祝福！"
             nameLab.textColor = UIColor.black
             self.addSubview(nameLab)
+            
+            let descLab = UILabel
+                .init(frame: CGRect.init(x:nameLab
+                    .frame.minX,
+                                         y:nameLab
+                                            .frame.maxY+20,
+                                         width: 200,
+                                         height: 20))
+            descLab.text = "为美丽的世界献上祝福！"
+            descLab.textColor = UIColor.black
+            self.addSubview(descLab)
+            
             //
             //这里添加一个音乐播放器
             let musicImgVw = UIImageView
                              .init(frame: CGRect.init(x: self
-                                                    .frame.maxX-30,
+                                                    .frame.maxX-60,
                                                       y: self
-                                                        .frame.maxY-30,
+                                                        .frame.minY+20,
                                                       width: 40,
                                                       height: 40))
             musicImgVw.image = UIImage
@@ -55,6 +67,26 @@ class TimeTableHeaderView: UIView {
             self.addSubview(musicImgVw)
         }
     }
-    
+    func showMusic() {
+        
+        if (MusicPlayer.getInstance().isPlaying == false) {
+            do {
+                xt.startAnimation()
+
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
+                try AVAudioSession.sharedInstance().setActive(true)
+                MusicPlayer.getInstance().play()
+            } catch {
+                
+            }
+            
+        }else{
+            xt.performSelector(Selector("stopAnimation"), withObject: nil, afterDelay: 5)
+
+            MusicPlayer.getInstance().stop()
+        }
+ 
+    }
+
     
 }
