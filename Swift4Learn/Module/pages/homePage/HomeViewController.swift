@@ -49,6 +49,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     func viewConfig() -> Void {
         autoreleasepool {
             
+            _dataSource = NSMutableArray.init(capacity: 0)
             // 代码规范写的很痛苦  看的比较舒畅
             _tableView = UITableView.init(
                             frame:CGRect.init(x: 0,
@@ -70,7 +71,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
                                                     width:
                                                 kScreenWidth,
                                                     height:
-                                                kScreenWidth/4)),
+                                                kScreenWidth/2)),
                                       backgroundColor: (UIColor.white))
             _tableView.tableHeaderView = tabHeaderView
         }
@@ -82,7 +83,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         return 1;
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+        return _dataSource.count;
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseStr = "cellReuse"
@@ -91,7 +92,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         if cell == nil {
             cell = OldTimeTableViewCell.init(style:.default, reuseIdentifier: reuseStr)
         }
-        
+//        
         return cell!;
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

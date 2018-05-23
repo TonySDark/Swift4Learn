@@ -9,7 +9,8 @@
 import UIKit
 
 class OldTimeTableViewCell: UITableViewCell {
-
+    var picImgVw:UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,20 +25,20 @@ class OldTimeTableViewCell: UITableViewCell {
     // 自定义的方法
     override func parentViewAddAllChildViews(_ parentView: UIView?) {
         autoreleasepool {
-            let picImgVw = UIImageView
+            picImgVw = UIImageView
                            .init(frame: CGRect
                                         .init(x: 0,
                                               y: 0,
                                               width: self.contentView.bounds.width,
                                               height: self.contentView.bounds.height))
-            self.contentView .addSubview(picImgVw)
+            self.contentView.addSubview(picImgVw)
             
         }
     }
     
     override func parentViewDidRefresh(_ parentView: UIView?, _ model: NSObject?) {
        
-    
+        
     }
     
     

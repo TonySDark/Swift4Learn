@@ -14,7 +14,7 @@
 
 import Foundation
 import UIKit
-
+import AVFoundation
 
 //OC宏定义的swift的写法：由于swift没有宏定义，该怎么办？？？
 //需要定义全局常量/方法   呦嚯嚯～呦嚯嚯～

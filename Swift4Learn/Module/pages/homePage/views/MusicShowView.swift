@@ -28,9 +28,9 @@ class MusicShowView: UIView {
     }
     
     func createDefaultAttribute(frame: CGRect) -> Void {
-        numberOfRect = 6;
-        self.rectBackgroundColor = UIColor.black
-        space = 1;
+        numberOfRect = 3;
+        self.rectBackgroundColor = UIColor.init(red: 200/255, green: 42/255, blue: 55/255, alpha: 1)
+        space = 5;
         defaultSize = frame.size
     }
     func addAnimateWithDelay(delay: Double) -> CAAnimation {

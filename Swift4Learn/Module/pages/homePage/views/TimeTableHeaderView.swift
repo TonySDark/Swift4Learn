@@ -10,7 +10,11 @@
 import UIKit
 
 class TimeTableHeaderView: UIView {
-
+    var showMusicSwitch:MusicShowView?
+    var nameLab:UILabel? = nil
+    var descLab:UILabel? = nil
+   
+    
     static func initWith(frame: CGRect,backgroundColor: UIColor) -> TimeTableHeaderView {
         let view = TimeTableHeaderView.init(frame: frame)
         view.backgroundColor = backgroundColor
@@ -30,59 +34,59 @@ class TimeTableHeaderView: UIView {
             iconImgVw.backgroundColor = UIColor
                                         .red
             self.addSubview(iconImgVw)
-            let nameLab = UILabel
+            
+            nameLab = UILabel
                           .init(frame: CGRect.init(x:iconImgVw
                                                      .frame.maxX+30,
                                                    y:iconImgVw
                                                     .frame.minY+50,
                                                    width: 200,
                                                    height: 20))
-            nameLab.text = "为美丽的世界献上祝福！"
-            nameLab.textColor = UIColor.black
-            self.addSubview(nameLab)
+            nameLab!.text = "为美丽的世界献上祝福！"
+            nameLab!.textColor = UIColor.black
+            self.addSubview(nameLab!)
             
-            let descLab = UILabel
-                .init(frame: CGRect.init(x:nameLab
+            descLab = UILabel
+                .init(frame: CGRect.init(x:nameLab!
                     .frame.minX,
-                                         y:nameLab
+                                         y:nameLab!
                                             .frame.maxY+20,
                                          width: 200,
                                          height: 20))
-            descLab.text = "为美丽的世界献上祝福！"
-            descLab.textColor = UIColor.black
-            self.addSubview(descLab)
+            descLab!.text = "为美丽的世界献上祝福！"
+            descLab!.textColor = UIColor.black
+            self.addSubview(descLab!)
             
-            //
             //这里添加一个音乐播放器
-            let musicImgVw = UIImageView
+            showMusicSwitch = MusicShowView
                              .init(frame: CGRect.init(x: self
                                                     .frame.maxX-60,
                                                       y: self
                                                         .frame.minY+20,
                                                       width: 40,
                                                       height: 40))
-            musicImgVw.image = UIImage
-                              .init(named: "哼.jpg")
-            musicImgVw.backgroundColor = UIColor.red
-            self.addSubview(musicImgVw)
+
+//            showMusic()
+//            showMusicSwitch?.startAnimation()
+            self.addSubview(showMusicSwitch!)
         }
     }
-    func showMusic() {
-        
+    @objc func showMusic() {
+        print(#function)
         if (MusicPlayer.getInstance().isPlaying == false) {
             do {
-                xt.startAnimation()
-
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
-                try AVAudioSession.sharedInstance().setActive(true)
+                showMusicSwitch?.startAnimation()
+                
+//                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
+//                try AVAudioSession.sharedInstance().setActive(true)
                 MusicPlayer.getInstance().play()
             } catch {
                 
             }
             
         }else{
-            xt.performSelector(Selector("stopAnimation"), withObject: nil, afterDelay: 5)
-
+            showMusicSwitch!
+            .perform(Selector("stopAnimation"), with: nil, afterDelay: 0)
             MusicPlayer.getInstance().stop()
         }
  
