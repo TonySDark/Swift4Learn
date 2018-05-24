@@ -59,8 +59,8 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
                                               ),
                             style: UITableViewStyle.plain
                                           )
-            _tableView.delegate = self as UITableViewDelegate;
-            _tableView.dataSource = self as UITableViewDataSource;
+            _tableView.delegate = self
+            _tableView.dataSource = self
             _tableView.rowHeight = 90.0;
             self.view.addSubview(_tableView)
             
@@ -96,6 +96,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         return cell!;
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(#function)
         tableView.deselectRow(at: indexPath, animated: true)
         
     }

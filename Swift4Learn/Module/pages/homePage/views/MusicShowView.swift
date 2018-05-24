@@ -17,6 +17,8 @@ class MusicShowView: UIView {
     var defaultSize: CGSize?
     /// 立方柱之间的间距
     var space: CGFloat = 0.2
+    var imageVw:UIImageView?
+    
 
     override init(frame: CGRect) {
         //
@@ -32,7 +34,14 @@ class MusicShowView: UIView {
         self.rectBackgroundColor = UIColor.init(red: 200/255, green: 42/255, blue: 55/255, alpha: 1)
         space = 5;
         defaultSize = frame.size
+        defaultState()
     }
+    func defaultState() {
+        imageVw = UIImageView.init(image: UIImage.init(named: "stop.png"))
+        imageVw.frame = self.bounds
+        self.addSubview(imageVw)
+    }
+ 
     func addAnimateWithDelay(delay: Double) -> CAAnimation {
         let animation = CABasicAnimation.init(keyPath: "transform.rotation.x")
         animation.repeatCount = MAXFLOAT;
@@ -71,8 +80,14 @@ class MusicShowView: UIView {
     
     func startAnimation() {
         self.addRect()
+        imageVw?.isHidden = true
     }
     func stopAnimation() {
         self.removeRect()
+        imageVw?.isHidden = false
     }
+}
+
+extension MusicShowView{
+
 }

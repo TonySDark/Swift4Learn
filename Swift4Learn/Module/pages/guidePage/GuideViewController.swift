@@ -9,8 +9,8 @@
 import UIKit
 
 class GuideViewController: BaseViewController,UIScrollViewDelegate {
-   
-
+    let musicPlayer:MusicPlayer? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
@@ -23,9 +23,9 @@ class GuideViewController: BaseViewController,UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     func musicStart() {
-        if (MusicPlayer.getInstance().isPlaying == false) {
+        if (musicPlayer?.getInstance().isPlaying == false) {
             do {
-                MusicPlayer.getInstance().play()
+                musicPlayer?.getInstance().play()
             } catch {
                 
             }

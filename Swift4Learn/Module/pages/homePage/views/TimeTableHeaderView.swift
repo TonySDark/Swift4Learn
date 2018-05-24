@@ -13,7 +13,7 @@ class TimeTableHeaderView: UIView {
     var showMusicSwitch:MusicShowView?
     var nameLab:UILabel? = nil
     var descLab:UILabel? = nil
-   
+    var musicPlayer:MusicPlayer? = nil
     
     static func initWith(frame: CGRect,backgroundColor: UIColor) -> TimeTableHeaderView {
         let view = TimeTableHeaderView.init(frame: frame)
@@ -58,6 +58,12 @@ class TimeTableHeaderView: UIView {
             self.addSubview(descLab!)
             
             //这里添加一个音乐播放器
+            let startMusic = UIButton.init(frame:CGRect.init(x:
+                                             self.frame.maxX-60,
+                                                             y: self.frame.minY+20,
+                                                             
+                                                             width:40,            height: 40))
+            startMusic.addTarget(self, action: Selector("showMusic"), for:.touchDown)            
             showMusicSwitch = MusicShowView
                              .init(frame: CGRect.init(x: self
                                                     .frame.maxX-60,
@@ -65,29 +71,25 @@ class TimeTableHeaderView: UIView {
                                                         .frame.minY+20,
                                                       width: 40,
                                                       height: 40))
-
-//            showMusic()
-//            showMusicSwitch?.startAnimation()
+            musicPlayer = MusicPlayer()
             self.addSubview(showMusicSwitch!)
         }
     }
     @objc func showMusic() {
         print(#function)
-        if (MusicPlayer.getInstance().isPlaying == false) {
+        if (musicPlayer?.getInstance().isPlaying == false) {
             do {
                 showMusicSwitch?.startAnimation()
-                
 //                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
 //                try AVAudioSession.sharedInstance().setActive(true)
-                MusicPlayer.getInstance().play()
+                musicPlayer?.getInstance().play()
             } catch {
                 
             }
             
         }else{
-            showMusicSwitch!
-            .perform(Selector("stopAnimation"), with: nil, afterDelay: 0)
-            MusicPlayer.getInstance().stop()
+            showMusicSwitch?.stopAnimation()
+            musicPlayer?.getInstance().stop()
         }
  
     }
