@@ -17,8 +17,16 @@ class MusicShowView: UIView {
     var defaultSize: CGSize?
     /// 立方柱之间的间距
     var space: CGFloat = 0.2
-    var imageVw:UIImageView?
+//    extension
+    weak var musicPlayer:MusicPlayer?
+    var imageVw:UIImageView? = nil
     
+    
+    
+    
+    deinit {
+        print(#function)
+    }
 
     override init(frame: CGRect) {
         //
@@ -38,10 +46,10 @@ class MusicShowView: UIView {
     }
     func defaultState() {
         imageVw = UIImageView.init(image: UIImage.init(named: "stop.png"))
-        imageVw.frame = self.bounds
-        self.addSubview(imageVw)
+        imageVw?.frame = self.bounds
+        self.addSubview(imageVw!)
     }
- 
+
     func addAnimateWithDelay(delay: Double) -> CAAnimation {
         let animation = CABasicAnimation.init(keyPath: "transform.rotation.x")
         animation.repeatCount = MAXFLOAT;
@@ -49,7 +57,7 @@ class MusicShowView: UIView {
         animation.autoreverses = false;
         animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionLinear)
         animation.fromValue = NSNumber.init(value: 0)
-        animation.toValue = NSNumber.init(value: M_PI)
+        animation.toValue = NSNumber.init(value: Double.pi)
         animation.duration = (Double)(numberOfRect) * 0.2;
         animation.beginTime = CACurrentMediaTime() + delay;
         return animation;
@@ -59,7 +67,6 @@ class MusicShowView: UIView {
      */
     func addRect() -> Void {
         self.removeRect()
-        self.isHidden = false
         for  i in 0...numberOfRect {
             let x = (CGFloat)(i) * (5 + space)
             let rView = UIView.init(frame: CGRect.init(x: x, y: 0, width: 5, height: defaultSize!.height))
@@ -72,22 +79,34 @@ class MusicShowView: UIView {
      *  移除矩形
      */
     func removeRect() -> Void {
-        if self.subviews.count > 0 {
-            self.removeFromSuperview()
-        }
-        self.isHidden = true
+        parentViewclearAllChildViews(self)
     }
     
     func startAnimation() {
         self.addRect()
-        imageVw?.isHidden = true
     }
     func stopAnimation() {
         self.removeRect()
-        imageVw?.isHidden = false
+        defaultState()
     }
 }
 
 extension MusicShowView{
-
+    //学习swift 触摸功能 https://www.cnblogs.com/fengmin/p/5713562.html
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        showMusic()
+    }
+    
+    @objc func showMusic() {
+        print(#function)
+        if (musicPlayer?.getInstance().isPlaying == false) {
+            startAnimation()
+            musicPlayer?.getInstance().play()
+        }else{
+            stopAnimation()
+            musicPlayer?.getInstance().pause()
+        }
+        
+    }
+    
 }

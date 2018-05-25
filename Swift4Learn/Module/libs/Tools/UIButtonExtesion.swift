@@ -8,38 +8,26 @@
 import Foundation
 import UIKit
 
-enum CSWE_ButtonTypeEnum {
-    case textOnly
-    case imageOnly
-    case textAndImage
-    
-}
-class CSW_ButtonType: NSObject {
-    @objc func initWith(config:Dictionary<String, String>) -> CSW_ButtonType {
-        //根据type匹配
-        let btnType:CSW_ButtonType = CSW_ButtonType.init()
-
-        
-//        if textOnly {
-//
-//        }else if imageOnly{
-//
-//        }else{//textAndImage
-//
-//        }
-        
-        return btnType
-    }
-}
-
-
-
 extension UIButton{
-    
-    func initWith(frame:CGRect,buttonType:CSWE_ButtonTypeEnum,btnTitle:String,btnImage:String) -> UIButton {
-        var btn:UIButton = UIButton.init(frame: frame)
-    
+    //
+    static func initWith(frame: CGRect,
+                         buttonType: UIButtonType,
+                         btnTitle: String?,
+                         titleState: UIControlState,
+                         btnImage: String?,
+                         imageState: UIControlState,
+                         target: Any?,
+                         action: Selector,
+                         actionEvent:UIControlEvents) -> UIButton {
+        let btn:UIButton = UIButton.init(type:.custom)
+        btn.frame = frame
+        if btnTitle != nil {
+            btn.setTitle(btnTitle, for: titleState)
+        }
+        if btnImage != nil {
+            btn.setImage(UIImage.init(named: btnImage!), for: imageState)
+        }
+        btn.addTarget(target, action: action, for: actionEvent)
         return btn
     }
-    
 }
