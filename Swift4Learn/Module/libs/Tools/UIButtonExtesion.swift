@@ -27,7 +27,8 @@ extension UIButton{
         if btnImage != nil {
             btn.setImage(UIImage.init(named: btnImage!), for: imageState)
         }
-        btn.addTarget(target, action: action, for: actionEvent)
+        let act = action
+        btn.addTarget(target, action: act, for: actionEvent)
         return btn
     }
 }

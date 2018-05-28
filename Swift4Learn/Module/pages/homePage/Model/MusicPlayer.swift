@@ -27,12 +27,11 @@ import AVFoundation
 
 class MusicPlayer: NSObject{
     private var instancePlayer: AVAudioPlayer? = nil
-    private let songsArr:Array<String> = ["5","4","3","2"]
+    var songsArr:Array<String> = ["5","4","3","2"]
     //extension
     private var playingNum:Int = 0
     var isRandomPlaying = false
-    
-    
+
     func getInstance() -> AVAudioPlayer{
         if (instancePlayer != nil) {
             print(#function)
@@ -46,6 +45,14 @@ class MusicPlayer: NSObject{
         instancePlayer?.delegate = self
         return instancePlayer!;
     }
+    
+    /// 改变播发器列表
+    ///
+    /// - Parameter list: 参数
+    func chageSongList(_ list:Array<String>) {
+        self.songsArr = list
+    }
+    
 }
 extension MusicPlayer:AVAudioPlayerDelegate{
     /*

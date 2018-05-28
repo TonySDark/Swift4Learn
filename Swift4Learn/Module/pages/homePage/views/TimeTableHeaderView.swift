@@ -15,15 +15,29 @@ class TimeTableHeaderView: UIView {
     var descLab:UILabel? = nil
     var musicPlayer:MusicPlayer! = MusicPlayer()
     
+    //这里写自己的话
+    
+    let words1Arr = ["第一行字"]
+    let words2Arr = ["第二行字"]
+    let happyWordsArr1 = ["first line"]
+    let happyWordsArr2 = ["second line"]
+    
+    
+    deinit {
+        musicPlayer.stop()
+        musicPlayer = nil
+        NotificationCenter.default.removeObserver(self)
+    }
     static func initWith(frame: CGRect,backgroundColor: UIColor) -> TimeTableHeaderView {
         let view = TimeTableHeaderView.init(frame: frame)
         view.backgroundColor = backgroundColor
         view.parentViewAddAllChildViews(view)
+        NotificationCenter.default.addObserver(view, selector:#selector(view.ohTheDayIsComing(_:)), name: Notification.Name(rawValue: "TheDayIsComing"), object: nil)
+
         return view
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
-        NotificationCenter.default.addObserver(self, selector: Selector("ohTheDayIsComing:"), name: Notification.Name(rawValue: "TheDayIsComing"), object: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,33 +47,34 @@ class TimeTableHeaderView: UIView {
     override func parentViewAddAllChildViews(_ parentView: UIView?) {
         autoreleasepool {
             let iconImgVw = UIImageView
-                            .init(frame:CGRect.init(x: 30,
+                            .init(frame:CGRect.init(x: 20,
                                                     y: 30,
-                                                    width: 120,
-                                                    height: 120))
+                                                    width: 80,
+                                                    height: 80))
             iconImgVw.image = UIImage
                               .init(named: "哼.jpg")
             iconImgVw.backgroundColor = UIColor
                                         .red
             self.addSubview(iconImgVw)
-            
+            // 这里使用OC的方式  可能会有♻️
             let playOrStopBtn = UIButton.initWith(frame: CGRect.init(x: iconImgVw.frame.maxX+30, y: iconImgVw.frame.minY, width: 40, height: 40),
                                                   buttonType: .custom,
                                              btnTitle: nil,
                                              titleState:.normal, btnImage: "play.png",
                                              imageState:.normal,
                                              target: self,
-                                             action: Selector(""),
+                                             action: #selector(self.playOrStopAction(_:)),
                                              actionEvent: .touchDown)
             self.addSubview(playOrStopBtn)
             
             nameLab = UILabel
                           .init(frame: CGRect.init(x:iconImgVw
                                                      .frame.maxX+30,
-                                                   y:iconImgVw
-                                                    .frame.minY+50,
-                                                   width: 200,
-                                                   height: 20))
+                                                   y:playOrStopBtn
+                                                    .frame.minY+40,
+                                                   width: 254,
+                                                   height: 50))
+            nameLab?.numberOfLines = 2
             nameLab!.text = "😜"
             nameLab!.textColor = UIColor.black
             self.addSubview(nameLab!)
@@ -69,9 +84,10 @@ class TimeTableHeaderView: UIView {
                     .frame.minX,
                                          y:nameLab!
                                             .frame.maxY+20,
-                                         width: 200,
-                                         height: 20))
+                                         width: 254,
+                                         height: 50))
             descLab!.text = "为美丽的世界献上祝福！"
+            descLab?.numberOfLines = 2
             descLab!.textColor = UIColor.black
             self.addSubview(descLab!)
             
@@ -92,21 +108,27 @@ class TimeTableHeaderView: UIView {
     }
 }
 extension TimeTableHeaderView{
-    func playOrStopAction(btn: UIButton) {
-        if (musicPlayer?.getInstance().isPlaying == true) {
-            showMusicSwitch?.stopAnimation()
+    //  动作
+    @objc func playOrStopAction(_ btn: UIButton) {
+        var imageName = ""
+        if (showMusicSwitch?.showMusic() == true) {
+            imageName = "pause.png"
         }else{
-            showMusicSwitch?.startAnimation()
+            imageName = "play.png"
         }
+        btn.setImage(UIImage.init(named:imageName), for: .normal)
+
     }
+    
 }
 
 extension TimeTableHeaderView{
+    
     //通知的方法
     /*
      *  TODO 通知
      */
-    func ohTheDayIsComing(_ userNotification:Notification) {
+    @objc func ohTheDayIsComing(_ userNotification:Notification) {
         var dic:Dictionary = userNotification.userInfo!
         let message:String = dic["time"] as! String
         /*
@@ -114,12 +136,17 @@ extension TimeTableHeaderView{
          *  https://www.aliyun.com/jiaocheng/363099.html
          */
         if (message.compare("prince").rawValue == 0)  {
-            nameLab!.text = "Happy BirthDay!"
-            descLab!.text = "为美丽的公主献上祝福！"
+            let num = Int(arc4random_uniform(UInt32(happyWordsArr1.count-1)))
+
+            nameLab!.text = happyWordsArr1[num]
+            descLab!.text = happyWordsArr2[num]
         }
         if (message.compare("alwaysPrince").rawValue == 0)  {
-            nameLab!.text = "为平凡的自己献上祝福！"
-            descLab!.text = "为每天的自己献上祝福！"
+            
+           let num = Int(arc4random_uniform(UInt32(words1Arr.count-1)))
+            nameLab!.text = words1Arr[num]
+            descLab!.text = words2Arr[num]
         }
     }
+    
 }

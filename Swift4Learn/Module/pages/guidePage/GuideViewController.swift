@@ -15,25 +15,12 @@ class GuideViewController: BaseViewController,UIScrollViewDelegate {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.addViews()
-        self.musicStart()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func musicStart() {
-        if (musicPlayer?.getInstance().isPlaying == false) {
-            do {
-                musicPlayer?.getInstance().play()
-            } catch {
-                
-            }
-        }
-    }
-    
-    
-    
     @objc func addViews() {
         //笔者这里图片就不给大家了，
         let guidePicArr:Array<String> = [

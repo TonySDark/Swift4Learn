@@ -20,11 +20,10 @@ class MusicShowView: UIView {
 //    extension
     weak var musicPlayer:MusicPlayer?
     var imageVw:UIImageView? = nil
-    
-    
-    
-    
+ 
     deinit {
+        imageVw?.removeFromSuperview()
+        imageVw = nil
         print(#function)
     }
 
@@ -97,16 +96,17 @@ extension MusicShowView{
         showMusic()
     }
     
-    @objc func showMusic() {
+    @objc func showMusic() -> Bool{
         print(#function)
         if (musicPlayer?.getInstance().isPlaying == false) {
             startAnimation()
             musicPlayer?.getInstance().play()
+            return true
         }else{
             stopAnimation()
             musicPlayer?.getInstance().pause()
+            return false
         }
-        
     }
     
 }

@@ -10,6 +10,7 @@
 		EA30545520ABC67C00B81C40 /* Swift4LearnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30545420ABC67C00B81C40 /* Swift4LearnUITests.swift */; };
 		EA30546320ABC68600B81C40 /* Swift4LearnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30546220ABC68600B81C40 /* Swift4LearnTests.swift */; };
 		EA30547920ABD13800B81C40 /* libTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA30543420ABC29500B81C40 /* libTools.a */; };
+		EA32C4EA20BBE367004255D2 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = EA32C4E920BBE367004255D2 /* pause.png */; };
 		EA5D12F520A3DB2400CDB45A /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D12F420A3DB2400CDB45A /* GuideViewController.swift */; };
 		EA5D12F720A3DB4F00CDB45A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D12F620A3DB4F00CDB45A /* BaseViewController.swift */; };
 		EA5D12F920A3DB6400CDB45A /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D12F820A3DB6400CDB45A /* BasePresenter.swift */; };
@@ -121,6 +122,7 @@
 		EA30546020ABC68600B81C40 /* Swift4LearnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift4LearnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA30546220ABC68600B81C40 /* Swift4LearnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift4LearnTests.swift; sourceTree = "<group>"; };
 		EA30546420ABC68600B81C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA32C4E920BBE367004255D2 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		EA5D12F420A3DB2400CDB45A /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		EA5D12F620A3DB4F00CDB45A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EA5D12F820A3DB6400CDB45A /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 		EA8AADED1F555E3C000B706F /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				EA32C4E920BBE367004255D2 /* pause.png */,
 				EADA944E20C3C18600FC3396 /* play.png */,
 				EADA944C20C3C17700FC3396 /* stop.png */,
 				EAD838F320B53F1B0067B3A6 /* 640_960.png */,
@@ -669,6 +672,7 @@
 				EABB42B820A9230E0036E241 /* 39851CB565921F579008B040DDEA8360.jpg in Resources */,
 				EABB42C320A9230E0036E241 /* 280613C3-45AB-43B9-B527-E7B4DB4B37DF.png in Resources */,
 				EADB272820AD6C8800E16A47 /* Info.plist in Resources */,
+				EA32C4EA20BBE367004255D2 /* pause.png in Resources */,
 				EABB42BA20A9230E0036E241 /* 02167B09-E97E-45D4-B712-995E6677A92E.png in Resources */,
 				EA8AADE21F555DF0000B706F /* Assets.xcassets in Resources */,
 				EA8AADE01F555DF0000B706F /* Main.storyboard in Resources */,
@@ -1011,7 +1015,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)//PrefixHeader.pch";
 				INFOPLIST_FILE = Swift4Learn/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tony.Swift4Learn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1028,7 +1032,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)//PrefixHeader.pch";
 				INFOPLIST_FILE = Swift4Learn/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tony.Swift4Learn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
