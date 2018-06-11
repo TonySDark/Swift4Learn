@@ -393,6 +393,9 @@
 		EA8AADEC1F555E2B000B706F /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				EA8B503B20CE55A000A4B247 /* MVVM */,
+				EA8B503A20CE559300A4B247 /* MVP */,
+				EA8B503920CE555700A4B247 /* MVC */,
 				EA8AADF01F555E66000B706F /* pages */,
 				EA8AADEE1F555E46000B706F /* libs */,
 				EA8AADED1F555E3C000B706F /* resource */,
@@ -425,11 +428,7 @@
 		EA8AADEF1F555E5A000B706F /* root */ = {
 			isa = PBXGroup;
 			children = (
-				EAB709A620C4D414002BF97E /* DataResulter.swift */,
-				EA6CB00020C7787800E4E684 /* BaseHelper.swift */,
-				EA5C60CC20C615CA004AB5D1 /* BaseController.swift */,
 				EA5D12F620A3DB4F00CDB45A /* BaseViewController.swift */,
-				EA5D12F820A3DB6400CDB45A /* BasePresenter.swift */,
 			);
 			path = root;
 			sourceTree = "<group>";
@@ -443,6 +442,31 @@
 				EA869E6820A2A6A40061FE55 /* homePage */,
 			);
 			path = pages;
+			sourceTree = "<group>";
+		};
+		EA8B503920CE555700A4B247 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				EAB709A620C4D414002BF97E /* DataResulter.swift */,
+				EA6CB00020C7787800E4E684 /* BaseHelper.swift */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		EA8B503A20CE559300A4B247 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				EA5C60CC20C615CA004AB5D1 /* BaseController.swift */,
+				EA5D12F820A3DB6400CDB45A /* BasePresenter.swift */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		EA8B503B20CE55A000A4B247 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 		EABB428120A9230E0036E241 /* 旧时光资源 */ = {

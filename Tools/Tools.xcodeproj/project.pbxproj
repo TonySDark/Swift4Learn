@@ -17,23 +17,23 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		EA30544220ABC31A00B81C40 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "$(SRCROOT)/libTools.a";
-			dstSubfolderSpec = 0;
+			dstSubfolderSpec = 16;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		EA30547720ABCE8A00B81C40 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 8;
 			dstPath = "$(SRCROOT)/ToolResource.bundle";
-			dstSubfolderSpec = 0;
+			dstSubfolderSpec = 16;
 			files = (
 				EADB271C20AD652E00E16A47 /* 哼.jpg in CopyFiles */,
 				EADB271B20AD652A00E16A47 /* scheme.png in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
