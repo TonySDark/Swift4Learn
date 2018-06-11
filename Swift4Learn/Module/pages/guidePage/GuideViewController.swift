@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// 页面简单  可以不用架构
 class GuideViewController: BaseViewController,UIScrollViewDelegate {
     let musicPlayer:MusicPlayer? = nil
     
@@ -104,6 +104,7 @@ class GuideViewController: BaseViewController,UIScrollViewDelegate {
         self.view.window?.rootViewController = navigationVC;
 
     }
+    
     /// UIScrollViewDelegate
     ///
     /// - Parameter _:

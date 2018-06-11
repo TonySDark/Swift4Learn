@@ -7,16 +7,21 @@
 //
 protocol CSW_BaseViewControllerProtocol {
     
-    //建立一个自定义的swift协议
-
+    //一个自定义的swift协议
     
-    func o_csw_pushToController(controller:BaseViewController,toController:BaseViewController) -> Bool
-    func o_csw_modalToController(controller:BaseViewController,toController:BaseViewController) -> Bool
+    //声明这是一个协议定义的并且是自定义的swift方法
+    func p_csw_pushToController(controller:BaseViewController,toController:BaseViewController) -> Bool
+    func p_csw_modalToController(controller:BaseViewController,toController:BaseViewController) -> Bool
     
 }
 import UIKit
 
 //除了继承父类  还能继承协议的方法
+
+// MVC架构中注意：它不是C， 他只是 视图控制器
+
+// MVP架构持有 BaseController
+
 class BaseViewController: UIViewController,CSW_BaseViewControllerProtocol {
 
     
@@ -42,10 +47,10 @@ class BaseViewController: UIViewController,CSW_BaseViewControllerProtocol {
         // Pass the selected object to the new view controller.
     }
     */
-    @objc func o_csw_pushToController(controller: BaseViewController, toController: BaseViewController) -> Bool {
+    @objc func p_csw_pushToController(controller: BaseViewController, toController: BaseViewController) -> Bool {
         return true
     }
-    @objc func o_csw_modalToController(controller:BaseViewController,toController:BaseViewController) -> Bool{
+    @objc func p_csw_modalToController(controller:BaseViewController,toController:BaseViewController) -> Bool{
         return true
     }
 

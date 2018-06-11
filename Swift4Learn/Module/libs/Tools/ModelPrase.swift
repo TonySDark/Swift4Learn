@@ -16,5 +16,5 @@ import UIKit
  *  模型层
  */
 class ModelPrase: NSObject {
-
+    
 }

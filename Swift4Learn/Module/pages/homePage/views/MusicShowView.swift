@@ -17,8 +17,6 @@ class MusicShowView: UIView {
     var defaultSize: CGSize?
     /// 立方柱之间的间距
     var space: CGFloat = 0.2
-//    extension
-    weak var musicPlayer:MusicPlayer?
     var imageVw:UIImageView? = nil
  
     deinit {
@@ -93,20 +91,6 @@ class MusicShowView: UIView {
 extension MusicShowView{
     //学习swift 触摸功能 https://www.cnblogs.com/fengmin/p/5713562.html
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        showMusic()
     }
-    
-    @objc func showMusic() -> Bool{
-        print(#function)
-        if (musicPlayer?.getInstance().isPlaying == false) {
-            startAnimation()
-            musicPlayer?.getInstance().play()
-            return true
-        }else{
-            stopAnimation()
-            musicPlayer?.getInstance().pause()
-            return false
-        }
-    }
-    
+
 }

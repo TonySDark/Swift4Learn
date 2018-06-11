@@ -10,12 +10,11 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource{
-    
-    @objc var _tableView : UITableView!
-    @objc var _dataSource : NSMutableArray!
-    var tabHeaderView:TimeTableHeaderView?
-    
+class HomeViewController: BaseViewController{
+    var tableView : UITableView!
+    var homeTabHelper:HomeTableHelper?
+    var tabHeaderView:TimeTableHeaderView?    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,44 +26,45 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //ButtonAction
-    @objc func AddPicture(){
-        //添加图片
-        print(#function)
-    }
+ 
     // 视图
     func addNavigationBar(){
         self.navigationController?
         .navigationBar.backgroundColor = UIColor.black
         self.title = "时光"
         //这里很奇怪 必须写成OC的方式，否则找不到方法
-        let rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem:.add,
+        //猜测应该是反射到该方法的
+        let leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem:.add,
+                                                      target:self,
+                                                      action:
+            #selector(HomeViewController.addPicture)
+        )
+        self.navigationItem.leftBarButtonItem = leftBarButtonItem
+
+        
+        let rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem:.bookmarks,
                                  target:self,
                                  action:
-            #selector(HomeViewController.AddPicture)
+            #selector(HomeViewController.goSuriprisePage)
             )
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
-
+    //完整的无返回值的方法
     func viewConfig() -> Void {
         autoreleasepool {
-            
-            _dataSource = NSMutableArray.init(capacity: 0)
             // 代码规范写的很痛苦  看的比较舒畅
-            _tableView = UITableView.init(
-                            frame:CGRect.init(x: 0,
-                                              y: 0,
-                                              width: kScreenWidth,
-                                              height: kScreenHeight
-                                              ),
-                            style: UITableViewStyle.plain
+            self.tableView = UITableView.init(
+                                frame:CGRect.init(x: 0,
+                                                  y: 0,
+                                                  width: kScreenWidth,
+                                                  height: kScreenHeight
+                                                  ),
+                                style: UITableViewStyle.plain
                                           )
-            _tableView.delegate = self
-            _tableView.dataSource = self
-            _tableView.rowHeight = 90.0;
-            self.view.addSubview(_tableView)
+            self.tableView.rowHeight = 90.0;
+            self.view.addSubview(self.tableView)
             
-            tabHeaderView = TimeTableHeaderView
+            self.tabHeaderView = TimeTableHeaderView
                             .initWith(frame: (CGRect
                                               .init(x: 0,
                                                     y: 0,
@@ -72,35 +72,39 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
                                                 kScreenWidth,
                                                     height:
                                                 kScreenWidth/2)),
-                                      backgroundColor: (UIColor.white))
-            _tableView.tableHeaderView = tabHeaderView
-        }
-    }
+                                      backgroundColor: (UIColor.white),
+                                      target:self,
+                                      action:#selector(showMusic))
+            self.tableView.tableHeaderView = self.tabHeaderView
+            //初始化controller
+            homeTabHelper = HomeTableHelper.getHelper(tableView: self.tableView)
 
-    
-    //UITableViewDataSource/UITableViewDelegate
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1;
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return _dataSource.count;
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let reuseStr = "cellReuse"
-        var cell = tableView
-            .dequeueReusableCell(withIdentifier: reuseStr)
-        if cell == nil {
-            cell = OldTimeTableViewCell.init(style:.default, reuseIdentifier: reuseStr)
         }
-//        
-        return cell!;
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(#function)
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-    }
-    
-    
 }
-
+extension HomeViewController{
+    //ButtonAction
+    @objc func goSuriprisePage(){
+        print(#function + "去网页")
+        let endVC = EndViewController.init()
+        self.navigationController?
+            .pushViewController(endVC, animated: true)
+    }
+    @objc func addPicture(){
+        /***TODO 添加图片***/
+        print(#function + "添加图片")
+        let itemVC = ItemViewController.init()
+        self.navigationController?
+            .pushViewController(itemVC, animated: true)
+    }
+    @objc func showMusic() -> Bool{
+        print(#function)
+        let isExcuted:Bool = (homeTabHelper?.playMusic())!
+        if (isExcuted){
+            tabHeaderView?.showMusicSwitch?.startAnimation()
+        }else{
+            tabHeaderView?.showMusicSwitch?.stopAnimation()
+        }
+        return isExcuted
+    }
+}

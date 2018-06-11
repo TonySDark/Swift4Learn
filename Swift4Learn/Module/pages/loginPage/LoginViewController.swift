@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// 页面简单  可以不用架构
 class LoginViewController: BaseViewController {
     @objc private let account = "mm"
     @objc private let password = "123456"

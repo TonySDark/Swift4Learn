@@ -10,29 +10,31 @@
 import UIKit
 
 class TimeTableHeaderView: UIView {
-    var showMusicSwitch:MusicShowView?
-    var nameLab:UILabel? = nil
-    var descLab:UILabel? = nil
-    var musicPlayer:MusicPlayer! = MusicPlayer()
-    
-    //这里写自己的话
-    
-    let words1Arr = ["第一行字"]
-    let words2Arr = ["第二行字"]
-    let happyWordsArr1 = ["first line"]
-    let happyWordsArr2 = ["second line"]
+    public var showMusicSwitch:MusicShowView?
+    private var nameLab:UILabel? = nil
+    private var descLab:UILabel? = nil
+    private var action:Selector? = nil
+    private var target:UIViewController? = nil
+    private var words1Arr:Array<String>? = nil
+    private var words2Arr:Array<String>? = nil
+    private var happyWordsArr1:Array<String>? = nil
+    private var happyWordsArr2:Array<String>? = nil
     
     
     deinit {
-        musicPlayer.stop()
-        musicPlayer = nil
-        NotificationCenter.default.removeObserver(self)
     }
-    static func initWith(frame: CGRect,backgroundColor: UIColor) -> TimeTableHeaderView {
+    static func initWith(frame: CGRect,
+                         backgroundColor: UIColor,
+                         target:UIViewController,
+                         action:Selector
+        ) -> TimeTableHeaderView {
         let view = TimeTableHeaderView.init(frame: frame)
+        view.target = target
+        view.action = action
         view.backgroundColor = backgroundColor
         view.parentViewAddAllChildViews(view)
-        NotificationCenter.default.addObserver(view, selector:#selector(view.ohTheDayIsComing(_:)), name: Notification.Name(rawValue: "TheDayIsComing"), object: nil)
+        
+//        NotificationCenter.default.addObserver(view, selector:#selector(view.ohTheDayIsComing(_:)), name: Notification.Name(rawValue: "TheDayIsComing"), object: nil)
 
         return view
     }
@@ -58,12 +60,12 @@ class TimeTableHeaderView: UIView {
             self.addSubview(iconImgVw)
             // 这里使用OC的方式  可能会有♻️
             let playOrStopBtn = UIButton.initWith(frame: CGRect.init(x: iconImgVw.frame.maxX+30, y: iconImgVw.frame.minY, width: 40, height: 40),
-                                                  buttonType: .custom,
+                                             buttonType: .custom,
                                              btnTitle: nil,
                                              titleState:.normal, btnImage: "play.png",
                                              imageState:.normal,
-                                             target: self,
-                                             action: #selector(self.playOrStopAction(_:)),
+                                             target: target!,
+                                             action: action!,
                                              actionEvent: .touchDown)
             self.addSubview(playOrStopBtn)
             
@@ -83,7 +85,7 @@ class TimeTableHeaderView: UIView {
                 .init(frame: CGRect.init(x:nameLab!
                     .frame.minX,
                                          y:nameLab!
-                                            .frame.maxY+20,
+                                            .frame.maxY+5,
                                          width: 254,
                                          height: 50))
             descLab!.text = "为美丽的世界献上祝福！"
@@ -99,27 +101,32 @@ class TimeTableHeaderView: UIView {
                                                         .frame.minY+20,
                                                       width: 40,
                                                       height: 40))
-            showMusicSwitch?.musicPlayer = musicPlayer
-            if (musicPlayer?.getInstance().isPlaying == true) {
-                    showMusicSwitch?.startAnimation()
-            }
             self.addSubview(showMusicSwitch!)
         }
     }
 }
 extension TimeTableHeaderView{
-    //  动作
-    @objc func playOrStopAction(_ btn: UIButton) {
-        var imageName = ""
-        if (showMusicSwitch?.showMusic() == true) {
-            imageName = "pause.png"
-        }else{
-            imageName = "play.png"
-        }
-        btn.setImage(UIImage.init(named:imageName), for: .normal)
-
+    func setFirstLineData(list:Array<String>?) {
+        words1Arr = list
     }
-    
+    func setSecondLineData(list:Array<String>?) {
+        words2Arr = list
+    }
+    func setHappyDayFirstLineData(list:Array<String>?) {
+        happyWordsArr1 = list
+    }
+    func setHappyDaySecondLineData(list:Array<String>?) {
+        happyWordsArr2 = list
+    }
+    func setAllData(normalList1:Array<String>?,
+                    normalList2:Array<String>?,
+                    happyList1:Array<String>?,
+                    happyList2:Array<String>?) {
+        setFirstLineData(list: normalList1)
+        setSecondLineData(list: normalList2)
+        setHappyDayFirstLineData(list: happyList1)
+        setHappyDaySecondLineData(list: happyList2)
+    }
 }
 
 extension TimeTableHeaderView{
@@ -135,17 +142,25 @@ extension TimeTableHeaderView{
          *  TODO 字符串比较知识点
          *  https://www.aliyun.com/jiaocheng/363099.html
          */
+        
+        //这里需要容错
+        if (happyWordsArr1 == nil || happyWordsArr2 == nil ||
+            words1Arr == nil || words2Arr == nil
+            || happyWordsArr1?.count == 0 || happyWordsArr2?.count == 0 || words1Arr?.count == 0 || words2Arr?.count == 0) {
+            return
+        }
+        
         if (message.compare("prince").rawValue == 0)  {
-            let num = Int(arc4random_uniform(UInt32(happyWordsArr1.count-1)))
+            let num = Int(arc4random_uniform(UInt32((happyWordsArr1?.count)!-1)))
 
-            nameLab!.text = happyWordsArr1[num]
-            descLab!.text = happyWordsArr2[num]
+            nameLab!.text = happyWordsArr1?[num]
+            descLab!.text = happyWordsArr2?[num]
         }
         if (message.compare("alwaysPrince").rawValue == 0)  {
             
-           let num = Int(arc4random_uniform(UInt32(words1Arr.count-1)))
-            nameLab!.text = words1Arr[num]
-            descLab!.text = words2Arr[num]
+            let num = Int(arc4random_uniform(UInt32((words1Arr?.count)!-1)))
+            nameLab!.text = words1Arr?[num]
+            descLab!.text = words2Arr?[num]
         }
     }
     
