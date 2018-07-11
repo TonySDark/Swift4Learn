@@ -24,9 +24,9 @@ class GuideViewController: BaseViewController,UIScrollViewDelegate {
     @objc func addViews() {
         //笔者这里图片就不给大家了，
         let guidePicArr:Array<String> = [
-            "16A55A11CFF1A472A2B56B721618D445.jpg",
-            "194FC7F20160842B92F847D27BC9695D.jpg",
-            "1201CE9EBF1BF41FCE6273380881046A.jpg"]
+            "1.jpg",
+            "2.jpg",
+            "3.jpg"]
         //你一定会问我系列套餐：constant.swift
         //? 和 ! 其实分别是Swift语言中对一种可选类型（ Optional) 操作的语法。一个没赋值 一个 赋值了
         //After that， 后你一定还会问我 x:类型？ 这是啥
